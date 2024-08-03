@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+
+:root {
+  --primary-color: #4caf50; /* Fresh Green */
+  --secondary-color: #ffeb3b; /* Bright Yellow */
+  --accent-color: #000000; /* Black */
+  --background-color: #121212; /* Dark Background */
+  --text-color: #ffffff; /* White */
+  --link-color: #4caf50; /* Fresh Green */
+  --link-hover-color: #81c784; /* Light Green */
+  --button-color: #ffeb3b; /* Bright Yellow */
+  --button-hover-color: #fbc02d; /* Darker Yellow */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+main {
+  margin-top: 65px;
+  /* Adjust based on navbar height */
+}
+
+main > section {
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 0.5rem 0;
+  /* Adjust padding */
+  height: 60px;
+  /* Adjust height */
+  background-color: var(--background-color);
+  /* Match navbar with background */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: var(--link-color);
+  padding: 0;
+  /* Adjust padding */
+  transition: color 0.3s ease;
+  /* Smooth transition */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active {
+  color: var(--link-hover-color);
+  /* Color on hover and active */
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--button-hover-color);
+  /* Highlight color for active link */
+  font-weight: bold;
+  /* Make active link bold */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  /* Larger font size for the brand */
+  color: var(--primary-color);
+  /* Brand color */
+}
+h1.asmat {
+  position: relative;
+  z-index: 2;
+  font-size: 5em;
+  font-weight: 900;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  transform: rotate(5deg);
+  text-shadow: 1px 1px hsl(50, 50%, 45%), 2px 2px hsl(50, 50%, 40%),
+    3px 3px hsl(50, 50%, 35%), 4px 4px hsl(50, 50%, 34%),
+    5px 5px hsl(50, 50%, 33%), 6px 6px hsl(50, 50%, 32%),
+    7px 7px hsl(50, 50%, 31%), 8px 8px hsl(50, 50%, 30%),
+    9px 9px hsl(50, 50%, 29%), 10px 10px hsl(50, 50%, 28%),
+    10px 10px 30px rgba(0, 0, 0, 0.7);
+}
+.iam {
+  color: #4caf50;
+}
