@@ -28,6 +28,7 @@ body,
 html {
   height: 100%;
   font-family: "Exo 2", sans-serif;
+  overflow: scroll;
 }
 
 body {
@@ -121,8 +122,6 @@ main > section {
 
 /* Name styles */
 .iam,
-
-
 .name {
   margin-block-start: 0;
   margin-block-end: 0;
