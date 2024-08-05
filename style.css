@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
 
 :root {
@@ -10,80 +11,172 @@
   --link-hover-color: #81c784; /* Light Green */
   --button-color: #ffeb3b; /* Bright Yellow */
   --button-hover-color: #fbc02d; /* Darker Yellow */
+  --light-pos-x: 1; /* left: -1, center: 0, right: 1 */
+  --light-pos-y: -1; /* top: -1, center: 0, bottom: 1 */
+  --rim-size: 0.02ch;
+  --shadow-offset: 0.2ch;
+  --shadow-blur: 0.1ch;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* Global Styles */
+
+body,
+html {
+  height: 100%;
+  font-family: "Exo 2", sans-serif;
+}
+
 body {
+  text-align: center;
   background-color: var(--background-color);
-  overflow: hidden;
 }
 
-main {
-  margin-top: 65px;
-  /* Adjust based on navbar height */
+header {
+  z-index: 1000;
 }
-
 main > section {
-  min-height: 100vh;
+  min-height: 100vw;
 }
-
 /* Navbar Styles */
 .navbar {
   padding: 0.5rem 0;
-  /* Adjust padding */
-  height: 60px;
-  /* Adjust height */
   background-color: var(--background-color);
-  /* Match navbar with background */
 }
 
-.navbar-nav .nav-link {
-  font-size: 1.1rem;
+.navbar-nav .nav-link,
+.dropmenu a {
+  font-size: 1rem;
   color: var(--link-color);
-  padding: 0;
-  /* Adjust padding */
   transition: color 0.3s ease;
-  /* Smooth transition */
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:active {
-  color: var(--link-hover-color);
-  /* Color on hover and active */
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link.active,
+.dropmenu a:hover,
+.dropmenu a:active,
+.dropmenu a.active {
+  color: var(--button-hover-color);
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--button-hover-color);
-  /* Highlight color for active link */
   font-weight: bold;
-  /* Make active link bold */
 }
 
 .navbar-brand {
   font-size: 1.5rem;
-  /* Larger font size for the brand */
   color: var(--primary-color);
-  /* Brand color */
 }
-h1.asmat {
+
+#home {
+  color: var(--text-color);
+}
+
+.profile {
+  overflow: hidden;
   position: relative;
-  z-index: 2;
-  font-size: 5em;
-  font-weight: 900;
-  letter-spacing: 15px;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Profile image styles */
+.profile-img {
+  border: 5px solid var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .profile-img {
+    max-width: 60%; /* Reduce the width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-img {
+    max-width: 50%; /* Further reduce the width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-img {
+    max-width: 50%; /* Further reduce the width for extra small screens */
+  }
+}
+
+/* Greeting styles */
+.greeting {
+  /* Adjust the size as needed */
+  font-weight: bold;
+}
+
+.creative-welcome {
+  /* Smaller than Hello */
+  color: var(--primary-color);
+}
+
+/* Name styles */
+.iam,
+
+
+.name {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
   text-transform: uppercase;
-  transform: rotate(5deg);
-  text-shadow: 1px 1px hsl(50, 50%, 45%), 2px 2px hsl(50, 50%, 40%),
-    3px 3px hsl(50, 50%, 35%), 4px 4px hsl(50, 50%, 34%),
-    5px 5px hsl(50, 50%, 33%), 6px 6px hsl(50, 50%, 32%),
-    7px 7px hsl(50, 50%, 31%), 8px 8px hsl(50, 50%, 30%),
-    9px 9px hsl(50, 50%, 29%), 10px 10px hsl(50, 50%, 28%),
-    10px 10px 30px rgba(0, 0, 0, 0.7);
-}
-.iam {
+  font-family: verdana;
+  font-size: clamp(1rem, calc(1rem + 15vw), 10rem);
+  font-weight: 700;
   color: #4caf50;
+  /** TEXT GRADIENT */
+  /* color:transparent;
+  background-image: -webkit-linear-gradient(45deg, #ffeb3b 18%, #386e58 66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+.btn {
+  font-size: 1rem;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+.btn-outline-light {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+/* //mac like window// */

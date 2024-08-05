@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="Fabicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Fabicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Fabicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Fabicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Fabicon/favicon-32x32.png">
+    <title>Asmat</title>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="updating.css">
 </head>
 
 <body>
@@ -14,7 +20,7 @@
     <header>
         <nav class="navbar navbar-expand-md border-bottom bg-black fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#home">Your Name</a>
+                <a class="navbar-brand" href="#home">Asmat</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,9 +34,6 @@
                             <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#resume">Resume</a>
                         </li>
                         <li class="nav-item">
@@ -41,9 +44,9 @@
                                 aria-expanded="false">
                                 More
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-md-end">
+                            <ul class="dropdown-menu dropdown-menu-md-end dropmenu">
+                                <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
                                 <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
                                 <li><a class="dropdown-item" href="awards.html">Awards & Certifications</a></li>
                             </ul>
                         </li>
@@ -54,23 +57,60 @@
     </header>
 
     <main>
-        <section id="home" class="container-fluid text-center">
-            <div class="container">
-                <div class="row vh-100 d-flex align-items-center justify-content-center">
-                    <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-lg-2">
-                        d
+        <section id="home" class="d-flex flex-column justify-content-center min-vh-100 px-3 py-5">
+            <div class="container-lg container-md d-flex flex-column flex-lg-row align-items-center">
+                <div class="text-center text-lg-start order-last order-lg-first mb-4 mb-lg-0">
+                    <div class="d-flex align-items-center ms-2 ps-5">
+                        <h2 class="greeting"> Hello,</h2>
+                        <h1 class="creative-welcome">Welcome 👋</h1>
                     </div>
-                    <div class="col-12 col-lg-6 d-flex   order-lg-1 py-lg-3 row">
-                        <h3 class="iam">I am</h3>
-                        <h1 class="asmat">ASMAT</h1>
+                    <div class="d-flex align-items-center ms-2 ps-5">
+                        <h2 class="greeting"> I am</h2>
                     </div>
+                    <h1 class="name">ASMAT</h1>
+                    <p class="lead mb-5 py-3">Welcome to my corner of the web! 🌐 Dive into my projects, explore my
+                        work, and join me on my journey in the world of
+                        programming. 💻✨</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                        <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="#about">About Me</a>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
+                            href="portfolio.html">Projects</a>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center p-lg-5 p-1 mt-5 mt-lg-0 order-1 order-lg-2">
+                    <img class="img-fluid profile-img rounded-circle" src="homebg.png" alt="Profile Image">
                 </div>
             </div>
         </section>
-        <section id="about" class="container-fluid">About Content</section>
-        <section id="portfolio" class="container-fluid">Portfolio Content</section>
-        <section id="resume" class="container-fluid">Resume Content</section>
-        <section id="contact" class="container-fluid">Contact Content</section>
+
+
+        <section id="about" class="container-fluid py-5">
+            <div class="center">
+                <div>
+                    <div class="loader"></div>
+
+                    <h1>Working On Update</h1>
+                </div>
+            </div>
+        </section>
+        <section id="resume" class="container-fluid py-5">
+            <div class="center">
+                <div>
+                    <div class="loader"></div>
+
+                    <h1>Working On Update</h1>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="container-fluid py-5">C<div class="center">
+                <div>
+                    <div class="loader"></div>
+
+                    <h1>Working On Update</h1>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="bootstrap.bundle.js"></script>
